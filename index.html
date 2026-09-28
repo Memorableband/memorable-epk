@@ -25,7 +25,7 @@ h1{font-size:clamp(42px,7vw,100px);line-height:.95;letter-spacing:-.085em;text-t
 .intro{font-size:clamp(20px,2.6vw,32px);line-height:1.12;letter-spacing:-.03em;max-width:530px;margin:0 0 26px}
 .details{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:13px 0;display:flex;gap:20px;justify-content:space-between;font-size:13px}
 .hero figure{margin:26px 0 0}.photo{display:block;width:100%;height:auto;background:#a39a8c}
-.hero-photo{aspect-ratio:3/2;object-fit:cover;filter:contrast(1.08)}
+.hero-photo{height:auto;object-fit:contain}
 figcaption{display:flex;justify-content:space-between;gap:12px;padding:8px 0 0;color:var(--quiet);font-size:12px}
 .video-panel{background:var(--ink);padding:11px 11px 13px;color:var(--paper)}
 .video-panel video{display:block;width:100%;aspect-ratio:4/5;max-height:590px;background:#000;object-fit:contain}
@@ -67,6 +67,10 @@ footer{border-top:2px solid var(--ink);padding:17px 0 38px;display:flex;justify-
 a:focus-visible{outline:2px solid var(--red);outline-offset:5px}
 @media(max-width:600px){header{flex-wrap:wrap;padding:16px 0;gap:14px}.head-meta{width:100%}nav{flex-wrap:wrap;gap:12px 18px}nav a:nth-child(n){display:inline} .archive-entry{grid-template-columns:1fr;gap:24px}.archive-art{min-height:240px}.gallery figure:nth-child(2){grid-column:span 12}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+.moving .vertical-record{grid-column:1/-1;width:min(100%,380px);justify-self:center}.moving .vertical-record video{aspect-ratio:9/16}
+
+.record-info{display:block;min-width:0}.record-song{display:block;margin-top:6px;color:var(--quiet);font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:1.4;letter-spacing:.015em;text-transform:none}.moving figcaption{align-items:flex-start}
 </style>
 </head>
 <body><div class="sheet">
@@ -75,7 +79,7 @@ a:focus-visible{outline:2px solid var(--red);outline-offset:5px}
 <div class="hero" id="inicio"><div class="file-line mono small"><span>ARCHIVO / MEM.001</span><span>DELICIAS, CHIHUAHUA · 13.09.2026</span></div>
 <div class="hero-grid"><div class="hero-copy"><h1>Memorable</h1><p class="intro">Rock alternativo e indie en español desde Chihuahua.</p>
 <div class="details mono"><span>01 / Primer show</span><span>Café Placeres Sur / Delicias</span></div>
-<figure><img class="photo hero-photo" src="media/banda-en-vivo-archivo.jpg" alt="Memorable tocando en Café Placeres Sur; bajo, voz y guitarra en escena" width="1800" height="1200"><figcaption class="mono"><span>FOTOGRAFÍA 01 / EN VIVO</span><span>13 SEP 2026</span></figcaption></figure></div>
+<figure><img class="photo hero-photo" src="media/banda-cuatro-integrantes.jpg" alt="Los cuatro integrantes de Memorable en vivo, incluido Memo en la batería" width="4160" height="2773"><figcaption class="mono"><span>FOTOGRAFÍA 01 / EN VIVO</span><span>13 SEP 2026</span></figcaption></figure></div>
 <div class="video-panel" id="video-principal"><video controls playsinline preload="metadata" poster="media/voz-en-vivo-archivo.jpg" aria-label="Memorable en vivo, desde el segundo 49 del registro original durante un minuto y 29 segundos"><source src="media/en-vivo-hasta-0129.mp4" type="video/mp4">Tu navegador no puede reproducir este video.</video><div class="caption mono"><span>VIDEO 01 / REGISTRO EN VIVO</span><span>01:29</span></div></div></div></div>
 <section class="section" id="banda" aria-labelledby="bio-title"><div class="section-head"><h2 id="bio-title">La banda</h2><span class="mono small red">FICHA / 001</span></div>
 <div class="bio-grid"><span class="mono small">Chihuahua, México<br>Septiembre de 2026</span><div><p>Memorable es una banda de Chihuahua que se mueve entre el rock alternativo y el indie en español. Sus canciones nacen de letras y melodías cercanas que el grupo transforma en arreglos propios durante los ensayos.</p><p>Guitarras con ambiente, bajo, batería y una voz al frente sostienen un sonido melódico que puede pasar de lo íntimo a la energía del directo.</p>
@@ -92,9 +96,13 @@ a:focus-visible{outline:2px solid var(--red);outline-offset:5px}
 <figure><img src="media/bateria.jpg" alt="Baterista de Memorable en vivo" width="1800" height="1200" loading="lazy"><figcaption class="mono"><span>05 / BATERÍA</span></figcaption></figure>
 <figure><img src="media/bajo.jpg" alt="Bajista de Memorable en vivo" width="1439" height="1800" loading="lazy"><figcaption class="mono"><span>06 / BAJO</span></figcaption></figure>
 </div></section>
-<section class="section" id="videos" aria-labelledby="video-title"><div class="section-head"><h2 id="video-title">Más registros</h2><span class="mono small red">VIDEO / 02—03</span></div><div class="moving">
-<figure><div class="frame"><video controls playsinline preload="none" poster="media/banda-en-vivo-archivo.jpg" aria-label="Toma abierta de Memorable en vivo"><source src="media/banda-completa.mp4" type="video/mp4">Tu navegador no puede reproducir este video.</video></div><figcaption class="mono"><span>02 / BANDA COMPLETA</span><span>00:34</span></figcaption></figure>
-<figure><div class="frame"><video controls playsinline preload="none" poster="media/guitarra.jpg" aria-label="Primeros planos de Memorable en vivo"><source src="media/primeros-planos.mp4" type="video/mp4">Tu navegador no puede reproducir este video.</video></div><figcaption class="mono"><span>03 / DE CERCA</span><span>00:33</span></figcaption></figure>
+<section class="section" id="videos" aria-labelledby="video-title"><div class="section-head"><h2 id="video-title">Más registros</h2><span class="mono small red">VIDEO / 02—06</span></div><div class="moving">
+<figure><div class="frame"><video controls playsinline preload="none" poster="media/banda-en-vivo-archivo.jpg" aria-label="Humanos como tú, plano general de Memorable en vivo"><source src="media/banda-completa.mp4" type="video/mp4">Tu navegador no puede reproducir este video.</video></div><figcaption class="mono"><span class="record-info"><span>02 / PLANO GENERAL</span><span class="record-song">Humanos como tú</span></span><span>00:34</span></figcaption></figure>
+<figure><div class="frame"><video controls playsinline preload="none" poster="media/guitarra.jpg" aria-label="Monitor, primeros planos de Memorable en vivo"><source src="media/primeros-planos.mp4" type="video/mp4">Tu navegador no puede reproducir este video.</video></div><figcaption class="mono"><span class="record-info"><span>03 / PRIMEROS PLANOS</span><span class="record-song">Monitor</span></span><span>00:33</span></figcaption></figure>
+
+<figure><div class="frame"><video controls playsinline preload="none" poster="media/te-entiendo.jpg" aria-label="Te entiendo, registro en vivo de Memorable"><source src="media/te-entiendo.mp4" type="video/mp4">Tu navegador no puede reproducir este video.</video></div><figcaption class="mono"><span class="record-info"><span>04 / ENSAMBLE</span><span class="record-song">Te entiendo</span></span><span>01:07</span></figcaption></figure>
+<figure><div class="frame"><video controls playsinline preload="none" poster="media/vanessa.jpg" aria-label="Vanessa, registro en vivo de Memorable"><source src="media/vanessa.mp4" type="video/mp4">Tu navegador no puede reproducir este video.</video></div><figcaption class="mono"><span class="record-info"><span>05 / DESDE EL PÚBLICO</span><span class="record-song">Vanessa</span></span><span>02:24</span></figcaption></figure>
+<figure class="vertical-record"><div class="frame"><video controls playsinline preload="none" poster="media/en-vivo-nuevo.jpg" aria-label="Vicio, detalle de bajo en vivo de Memorable"><source src="media/en-vivo-nuevo.mp4" type="video/mp4">Tu navegador no puede reproducir este video.</video></div><figcaption class="mono"><span class="record-info"><span>06 / DETALLE DE BAJO</span><span class="record-song">Vicio</span></span><span>00:24</span></figcaption></figure>
 </div></section>
 <section class="section" id="contacto" aria-labelledby="contact-title"><div class="section-head"><h2 id="contact-title">Contacto</h2><span class="mono small red">CONTRATACIONES / MEM.001</span></div><div class="contact"><span class="mono small">Escríbenos para<br>presentaciones</span><div><a href="mailto:memorable.baand@gmail.com">memorable.baand@gmail.com</a><a href="https://www.instagram.com/memorableband/" target="_blank" rel="noopener noreferrer">@memorableband</a></div></div></section></main>
 <footer class="mono"><strong>MEMORABLE / ARCHIVO 001</strong><span>CHIHUAHUA, MÉXICO · 2026</span></footer>
